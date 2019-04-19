@@ -5,7 +5,7 @@ from selenium.common.exceptions import TimeoutException
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 
-
+#location of the chromedriver
 webdriver = webdriver.Chrome("C:\Users\Karan\Downloads\chromedriver_win32(2019)\chromedriver.exe")
 
 webdriver.get("https://wrem.sis.yorku.ca/Apps/WebObjects/REM.woa/wa/DirectAction/rem")
@@ -15,9 +15,9 @@ userElement = login.find_element_by_id("mli")
 passElement = login.find_element_by_id("password")
 loginButtonElement = webdriver.find_element_by_name("dologin")
 #This is where you input your yorku passport username
-userElement.send_keys("karanp")
+userElement.send_keys("USER")
 #This iswhere you input your yorku passport password
-passElement.send_keys("york4you")
+passElement.send_keys("PASS")
 
 
 loginButtonElement.click()
